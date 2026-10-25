@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LifeOS</title>
+  <style>
+    body {
+      font-family: -apple-system, "PingFang SC", sans-serif;
+      max-width: 640px;
+      margin: 80px auto;
+      padding: 0 24px;
+      line-height: 1.8;
+      color: #222;
+    }
+    h1 { font-size: 40px; margin-bottom: 8px; }
+    .tagline { color: #666; margin-bottom: 40px; }
+    .card {
+      border: 1px solid #eee;
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 12px;
+    }
+    .card h2 { font-size: 16px; margin: 0 0 4px; }
+    .card p { margin: 0; color: #888; font-size: 14px; }
+    footer { margin-top: 60px; color: #aaa; font-size: 13px; }
+  </style>
+</head>
+<body>
+  <h1>LifeOS</h1>
+  <p class="tagline">把每天过成可以复习的样子。</p>
+
+  <div class="card">
+    <h2>学习</h2>
+    <p>生词、摘录、复习队列</p>
+  </div>
+  <div class="card">
+    <h2>生活</h2>
+    <p>时间线、纪念日、照片</p>
+  </div>
+  <div class="card">
+    <h2>关于</h2>
+    <p>这个站是我自己写的，第一版。</p>
+  </div>
+
+  <footer>
+    <span id="today"></span> · 距 2027-04-11 还有 <span id="days"></span> 天
+  </footer>
+
+  <script>
+    const now = new Date();
+    document.getElementById("today").textContent =
+      now.toLocaleDateString("zh-CN", { year: "numeric", month: "long", day: "numeric" });
+
+    const target = new Date("2027-04-11");
+    document.getElementById("days").textContent =
+      Math.ceil((target - now) / (1000 * 60 * 60 * 24));
+  </script>
+</body>
+</html>
