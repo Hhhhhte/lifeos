@@ -27,8 +27,9 @@
       color: inherit;
     }
     .cards {
-      display: flex; /* 为了把三个板块横着排序 */
+      display: flex; /* 为了把四个板块横着排序 */
       gap: 16px;
+      flex-direction: column;
     }
 
     .cards .card {   /* 为了横向排版等宽 */
@@ -39,7 +40,7 @@
     .card h2 { font-size: 16px; margin: 0 0 4px; }
     .card p { margin: 0; color: #888; font-size: 14px; }
     footer { margin-top: 60px; color: #aaa; font-size: 13px; }
-    @media (max-width: 600px) {
+    @media (max-width: 400px) {
       .cards {
         flex-direction: column;
       }
@@ -49,19 +50,24 @@
 <body>
   <h1>LifeOS</h1>
   <p class="tagline">把每天过成可以复习的样子。</p>
-  <p>https://example.com/very/long/path/that/never/ends/and/keeps/going/forever</p>
   <div class="cards">
     <a class="card" href="about.html">
-      <h2>学习</h2>
+      <h2>📚</h2>
+      <h3>学习</h3>
       <p>生词、摘录、复习队列</p>
     </a>
     <div class="card">
-      <h2>生活</h2>
+      <h2>🌱</h2>
+      <h3>生活</h3>
       <p>时间线、纪念日、照片</p>
     </div>
     <div class="card">
-      <h2>关于</h2>
+      <h2>👤</h2>
+      <h3>关于</h3>
       <p>这个站是我自己写的，第一版。</p>
+    </div>
+    <div class="card">
+      <h2>➕</h2>
     </div>
   </div>    
 
