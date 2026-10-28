@@ -35,14 +35,18 @@
     .cards .card {   /* 为了横向排版等宽 */
       flex: 1;
     }
-
-    .card h2 .card h3 .card p {
+    
+    .card {
+      display: flex;
+      flex-direction: column;
       align-items: center;
+      text-align: center;
     }
 
     a.card:hover { border-color: #bbb; }
-    .card h2 { font-size: 12px; margin: 0 10px 4px;}
-    .card h3 { font-size: 16px; margin: 0 10px 4px; }
+    a.card:hover { border-color: #bbb; }
+    .card h2 { font-size: 28px; margin: 0 0 4px }
+    .card h3 { font-size: 16px; margin: 0 0 4px }
     .card p { margin: 0; color: #888; font-size: 14px; }
     footer { margin-top: 60px; color: #aaa; font-size: 13px; }
     @media (max-width: 400px) {
